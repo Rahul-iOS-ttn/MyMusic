@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		458CBC2E275D1E6F00943402 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458CBC2D275D1E6F00943402 /* Intents.framework */; };
+		458CBC31275D1E6F00943402 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC30275D1E6F00943402 /* IntentHandler.swift */; };
+		458CBC35275D1E6F00943402 /* MediaIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 458CBC2B275D1E6F00943402 /* MediaIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		45A70910275A0AD10058A7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7090F275A0AD10058A7F6 /* AppDelegate.swift */; };
 		45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70911275A0AD10058A7F6 /* SceneDelegate.swift */; };
 		45A70914275A0AD10058A7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70913275A0AD10058A7F6 /* ViewController.swift */; };
@@ -19,7 +22,35 @@
 		45A7092E275A1B380058A7F6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7092D275A1B380058A7F6 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		458CBC33275D1E6F00943402 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45A70904275A0AD10058A7F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 458CBC2A275D1E6F00943402;
+			remoteInfo = MediaIntent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		458CBC39275D1E6F00943402 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				458CBC35275D1E6F00943402 /* MediaIntent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		458CBC2B275D1E6F00943402 /* MediaIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MediaIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		458CBC2D275D1E6F00943402 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		458CBC30275D1E6F00943402 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		458CBC32275D1E6F00943402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45A7090C275A0AD10058A7F6 /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A7090F275A0AD10058A7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A70911275A0AD10058A7F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +67,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		458CBC28275D1E6F00943402 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				458CBC2E275D1E6F00943402 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45A70909275A0AD10058A7F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +85,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		458CBC2C275D1E6F00943402 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				458CBC2D275D1E6F00943402 /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		458CBC2F275D1E6F00943402 /* MediaIntent */ = {
+			isa = PBXGroup;
+			children = (
+				458CBC30275D1E6F00943402 /* IntentHandler.swift */,
+				458CBC32275D1E6F00943402 /* Info.plist */,
+			);
+			path = MediaIntent;
+			sourceTree = "<group>";
+		};
 		45A70903275A0AD10058A7F6 = {
 			isa = PBXGroup;
 			children = (
 				45A7090E275A0AD10058A7F6 /* MyMusic */,
+				458CBC2F275D1E6F00943402 /* MediaIntent */,
+				458CBC2C275D1E6F00943402 /* Frameworks */,
 				45A7090D275A0AD10058A7F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				45A7090C275A0AD10058A7F6 /* MyMusic.app */,
+				458CBC2B275D1E6F00943402 /* MediaIntent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +143,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		458CBC2A275D1E6F00943402 /* MediaIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 458CBC36275D1E6F00943402 /* Build configuration list for PBXNativeTarget "MediaIntent" */;
+			buildPhases = (
+				458CBC27275D1E6F00943402 /* Sources */,
+				458CBC28275D1E6F00943402 /* Frameworks */,
+				458CBC29275D1E6F00943402 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaIntent;
+			productName = MediaIntent;
+			productReference = 458CBC2B275D1E6F00943402 /* MediaIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		45A7090B275A0AD10058A7F6 /* MyMusic */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45A70920275A0ADD0058A7F6 /* Build configuration list for PBXNativeTarget "MyMusic" */;
@@ -91,10 +167,12 @@
 				45A70908275A0AD10058A7F6 /* Sources */,
 				45A70909275A0AD10058A7F6 /* Frameworks */,
 				45A7090A275A0AD10058A7F6 /* Resources */,
+				458CBC39275D1E6F00943402 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				458CBC34275D1E6F00943402 /* PBXTargetDependency */,
 			);
 			name = MyMusic;
 			productName = MyMusic;
@@ -110,6 +188,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					458CBC2A275D1E6F00943402 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					45A7090B275A0AD10058A7F6 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -129,11 +210,19 @@
 			projectRoot = "";
 			targets = (
 				45A7090B275A0AD10058A7F6 /* MyMusic */,
+				458CBC2A275D1E6F00943402 /* MediaIntent */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		458CBC29275D1E6F00943402 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45A7090A275A0AD10058A7F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +239,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		458CBC27275D1E6F00943402 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				458CBC31275D1E6F00943402 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45A70908275A0AD10058A7F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +259,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		458CBC34275D1E6F00943402 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 458CBC2A275D1E6F00943402 /* MediaIntent */;
+			targetProxy = 458CBC33275D1E6F00943402 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45A70915275A0AD10058A7F6 /* Main.storyboard */ = {
@@ -183,6 +288,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		458CBC37275D1E6F00943402 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8Z7DUYBZ6B;
+				INFOPLIST_FILE = MediaIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harkaudio.poc.MediaIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Hark POC Dev";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		458CBC38275D1E6F00943402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8Z7DUYBZ6B;
+				INFOPLIST_FILE = MediaIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harkaudio.poc.MediaIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Hark POC Dev";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		45A7091E275A0ADD0058A7F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -302,6 +449,7 @@
 		45A70921275A0ADD0058A7F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MyMusic/MyMusic.entitlements;
@@ -324,6 +472,7 @@
 		45A70922275A0ADD0058A7F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MyMusic/MyMusic.entitlements;
@@ -346,6 +495,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		458CBC36275D1E6F00943402 /* Build configuration list for PBXNativeTarget "MediaIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				458CBC37275D1E6F00943402 /* Debug */,
+				458CBC38275D1E6F00943402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		45A70907275A0AD10058A7F6 /* Build configuration list for PBXProject "MyMusic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
