@@ -10,6 +10,9 @@
 		458CBC2E275D1E6F00943402 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458CBC2D275D1E6F00943402 /* Intents.framework */; };
 		458CBC31275D1E6F00943402 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC30275D1E6F00943402 /* IntentHandler.swift */; };
 		458CBC35275D1E6F00943402 /* MediaIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 458CBC2B275D1E6F00943402 /* MediaIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		458CBC3F275D1F4D00943402 /* MediaIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC3E275D1F4D00943402 /* MediaIntents.intentdefinition */; };
+		458CBC42275D1F5A00943402 /* MediaIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC3E275D1F4D00943402 /* MediaIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		458CBC4A275D220400943402 /* PlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC49275D220400943402 /* PlayMediaIntentHandler.swift */; };
 		45A70910275A0AD10058A7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7090F275A0AD10058A7F6 /* AppDelegate.swift */; };
 		45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70911275A0AD10058A7F6 /* SceneDelegate.swift */; };
 		45A70914275A0AD10058A7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70913275A0AD10058A7F6 /* ViewController.swift */; };
@@ -51,6 +54,8 @@
 		458CBC2D275D1E6F00943402 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		458CBC30275D1E6F00943402 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		458CBC32275D1E6F00943402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		458CBC3E275D1F4D00943402 /* MediaIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MediaIntents.intentdefinition; sourceTree = "<group>"; };
+		458CBC49275D220400943402 /* PlayMediaIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMediaIntentHandler.swift; sourceTree = "<group>"; };
 		45A7090C275A0AD10058A7F6 /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A7090F275A0AD10058A7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A70911275A0AD10058A7F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +103,8 @@
 			children = (
 				458CBC30275D1E6F00943402 /* IntentHandler.swift */,
 				458CBC32275D1E6F00943402 /* Info.plist */,
+				458CBC3E275D1F4D00943402 /* MediaIntents.intentdefinition */,
+				458CBC49275D220400943402 /* PlayMediaIntentHandler.swift */,
 			);
 			path = MediaIntent;
 			sourceTree = "<group>";
@@ -244,6 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				458CBC31275D1E6F00943402 /* IntentHandler.swift in Sources */,
+				458CBC4A275D220400943402 /* PlayMediaIntentHandler.swift in Sources */,
+				458CBC3F275D1F4D00943402 /* MediaIntents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +264,7 @@
 				45A7092E275A1B380058A7F6 /* PlayerViewController.swift in Sources */,
 				45A70910275A0AD10058A7F6 /* AppDelegate.swift in Sources */,
 				45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */,
+				458CBC42275D1F5A00943402 /* MediaIntents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
