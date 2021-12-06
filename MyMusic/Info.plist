@@ -23,7 +23,6 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>INPlayMediaIntent</string>
-		<string>IntentIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

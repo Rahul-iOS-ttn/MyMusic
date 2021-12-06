@@ -26,4 +26,6 @@ class PlayMediaIntentHandler: NSObject, INPlayMediaIntentHandling, INAddMediaInt
         let response = INPlayMediaIntentResponse(code: INPlayMediaIntentResponseCode.handleInApp, userActivity: nil)
         completion(response)
     }
+    
+    // now that the file is shared with the extension you can implement the Add media here.
 }
