@@ -8,10 +8,22 @@
 import Foundation
 import Intents
 
-class PlayMediaIntentHandler: NSObject, INPlayMediaIntentHandling {
-    func handle(intent: INPlayMediaIntent, completion: @escaping (INPlayMediaIntentResponse) -> Void) {
-        completion(INPlayMediaIntentResponse(code: .handleInApp, userActivity: nil))
+class PlayMediaIntentHandler: NSObject, INPlayMediaIntentHandling, INAddMediaIntentHandling {
+    
+    
+//    // INAddMediaIntent
+    func handle(intent: INAddMediaIntent, completion: @escaping (INAddMediaIntentResponse) -> Void) {
+
+        let userActivity = NSUserActivity(activityType: "INAddMediaIntent")
+        let response = INAddMediaIntentResponse(code: INAddMediaIntentResponseCode.success, userActivity: userActivity)
+
+        completion(response)
+
     }
     
-    
+    // INPlayMediaIntent
+    func handle(intent: INPlayMediaIntent, completion: @escaping (INPlayMediaIntentResponse) -> Void) {
+        let response = INPlayMediaIntentResponse(code: INPlayMediaIntentResponseCode.handleInApp, userActivity: nil)
+        completion(response)
+    }
 }

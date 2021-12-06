@@ -11,6 +11,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var table: UITableView!
     
+    static let shared = ViewController()
+    
     var songs = [Song]()
     
     override func viewDidLoad() {

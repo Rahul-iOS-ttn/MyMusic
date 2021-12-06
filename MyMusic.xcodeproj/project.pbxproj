@@ -13,6 +13,7 @@
 		458CBC3F275D1F4D00943402 /* MediaIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC3E275D1F4D00943402 /* MediaIntents.intentdefinition */; };
 		458CBC42275D1F5A00943402 /* MediaIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC3E275D1F4D00943402 /* MediaIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		458CBC4A275D220400943402 /* PlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC49275D220400943402 /* PlayMediaIntentHandler.swift */; };
+		458CBC54275DAF3200943402 /* PlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CBC49275D220400943402 /* PlayMediaIntentHandler.swift */; };
 		45A70910275A0AD10058A7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7090F275A0AD10058A7F6 /* AppDelegate.swift */; };
 		45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70911275A0AD10058A7F6 /* SceneDelegate.swift */; };
 		45A70914275A0AD10058A7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70913275A0AD10058A7F6 /* ViewController.swift */; };
@@ -261,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45A70914275A0AD10058A7F6 /* ViewController.swift in Sources */,
+				458CBC54275DAF3200943402 /* PlayMediaIntentHandler.swift in Sources */,
 				45A7092E275A1B380058A7F6 /* PlayerViewController.swift in Sources */,
 				45A70910275A0AD10058A7F6 /* AppDelegate.swift in Sources */,
 				45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */,
