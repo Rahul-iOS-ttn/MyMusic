@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // singleton
+    static let shared = ViewController()
+    
     @IBOutlet weak var table: UITableView!
     
     var songs = [Song]()

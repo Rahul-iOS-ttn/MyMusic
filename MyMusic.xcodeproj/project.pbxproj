@@ -17,7 +17,40 @@
 		45A70929275A0E580058A7F6 /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45A70926275A0E570058A7F6 /* song1.mp3 */; };
 		45A7092A275A0E580058A7F6 /* song3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45A70927275A0E580058A7F6 /* song3.mp3 */; };
 		45A7092E275A1B380058A7F6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7092D275A1B380058A7F6 /* PlayerViewController.swift */; };
+		45EA89AE275F6C530012FCFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70913275A0AD10058A7F6 /* ViewController.swift */; };
+		45EA89B3275F6EBA0012FCFB /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7092D275A1B380058A7F6 /* PlayerViewController.swift */; };
+		45EF93C4275F3E1E00DF3979 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45EF93C3275F3E1E00DF3979 /* Intents.framework */; };
+		45EF93C7275F3E1E00DF3979 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EF93C6275F3E1E00DF3979 /* IntentHandler.swift */; };
+		45EF93CB275F3E1E00DF3979 /* SongIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45EF93C1275F3E1E00DF3979 /* SongIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		45EF93D5275F4AF600DF3979 /* SongIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45EF93D4275F4AF600DF3979 /* SongIntent.intentdefinition */; };
+		45EF93D6275F4AF600DF3979 /* SongIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45EF93D4275F4AF600DF3979 /* SongIntent.intentdefinition */; };
+		45EF93DC275F4B5500DF3979 /* SongIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EF93DB275F4B5500DF3979 /* SongIntentHandler.swift */; };
+		45EF93DD275F4B5500DF3979 /* SongIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EF93DB275F4B5500DF3979 /* SongIntentHandler.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45EF93C9275F3E1E00DF3979 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45A70904275A0AD10058A7F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45EF93C0275F3E1E00DF3979;
+			remoteInfo = SongIntent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45EF93CC275F3E1E00DF3979 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				45EF93CB275F3E1E00DF3979 /* SongIntent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		45A7090C275A0AD10058A7F6 /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +65,12 @@
 		45A70926275A0E570058A7F6 /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
 		45A70927275A0E580058A7F6 /* song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song3.mp3; sourceTree = "<group>"; };
 		45A7092D275A1B380058A7F6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		45EF93C1275F3E1E00DF3979 /* SongIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SongIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		45EF93C3275F3E1E00DF3979 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		45EF93C6275F3E1E00DF3979 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		45EF93C8275F3E1E00DF3979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45EF93D4275F4AF600DF3979 /* SongIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SongIntent.intentdefinition; sourceTree = "<group>"; };
+		45EF93DB275F4B5500DF3979 /* SongIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongIntentHandler.swift; sourceTree = "<group>"; };
 		45FC414C275CA926003B374F /* MyMusic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyMusic.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +82,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45EF93BE275F3E1E00DF3979 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45EF93C4275F3E1E00DF3979 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -50,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				45A7090E275A0AD10058A7F6 /* MyMusic */,
+				45EF93C5275F3E1E00DF3979 /* SongIntent */,
+				45EF93C2275F3E1E00DF3979 /* Frameworks */,
 				45A7090D275A0AD10058A7F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				45A7090C275A0AD10058A7F6 /* MyMusic.app */,
+				45EF93C1275F3E1E00DF3979 /* SongIntent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,13 +122,32 @@
 				45A7090F275A0AD10058A7F6 /* AppDelegate.swift */,
 				45A70911275A0AD10058A7F6 /* SceneDelegate.swift */,
 				45A70913275A0AD10058A7F6 /* ViewController.swift */,
+				45A7092D275A1B380058A7F6 /* PlayerViewController.swift */,
 				45A70915275A0AD10058A7F6 /* Main.storyboard */,
 				45A70918275A0ADD0058A7F6 /* Assets.xcassets */,
 				45A7091A275A0ADD0058A7F6 /* LaunchScreen.storyboard */,
 				45A7091D275A0ADD0058A7F6 /* Info.plist */,
-				45A7092D275A1B380058A7F6 /* PlayerViewController.swift */,
 			);
 			path = MyMusic;
+			sourceTree = "<group>";
+		};
+		45EF93C2275F3E1E00DF3979 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45EF93C3275F3E1E00DF3979 /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45EF93C5275F3E1E00DF3979 /* SongIntent */ = {
+			isa = PBXGroup;
+			children = (
+				45EF93C6275F3E1E00DF3979 /* IntentHandler.swift */,
+				45EF93C8275F3E1E00DF3979 /* Info.plist */,
+				45EF93D4275F4AF600DF3979 /* SongIntent.intentdefinition */,
+				45EF93DB275F4B5500DF3979 /* SongIntentHandler.swift */,
+			);
+			path = SongIntent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,15 +160,34 @@
 				45A70908275A0AD10058A7F6 /* Sources */,
 				45A70909275A0AD10058A7F6 /* Frameworks */,
 				45A7090A275A0AD10058A7F6 /* Resources */,
+				45EF93CC275F3E1E00DF3979 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				45EF93CA275F3E1E00DF3979 /* PBXTargetDependency */,
 			);
 			name = MyMusic;
 			productName = MyMusic;
 			productReference = 45A7090C275A0AD10058A7F6 /* MyMusic.app */;
 			productType = "com.apple.product-type.application";
+		};
+		45EF93C0275F3E1E00DF3979 /* SongIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45EF93CF275F3E1E00DF3979 /* Build configuration list for PBXNativeTarget "SongIntent" */;
+			buildPhases = (
+				45EF93BD275F3E1E00DF3979 /* Sources */,
+				45EF93BE275F3E1E00DF3979 /* Frameworks */,
+				45EF93BF275F3E1E00DF3979 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SongIntent;
+			productName = SongIntent;
+			productReference = 45EF93C1275F3E1E00DF3979 /* SongIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -111,6 +199,9 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					45A7090B275A0AD10058A7F6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					45EF93C0275F3E1E00DF3979 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -129,6 +220,7 @@
 			projectRoot = "";
 			targets = (
 				45A7090B275A0AD10058A7F6 /* MyMusic */,
+				45EF93C0275F3E1E00DF3979 /* SongIntent */,
 			);
 		};
 /* End PBXProject section */
@@ -147,6 +239,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45EF93BF275F3E1E00DF3979 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -157,11 +256,33 @@
 				45A70914275A0AD10058A7F6 /* ViewController.swift in Sources */,
 				45A7092E275A1B380058A7F6 /* PlayerViewController.swift in Sources */,
 				45A70910275A0AD10058A7F6 /* AppDelegate.swift in Sources */,
+				45EF93D5275F4AF600DF3979 /* SongIntent.intentdefinition in Sources */,
 				45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */,
+				45EF93DC275F4B5500DF3979 /* SongIntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45EF93BD275F3E1E00DF3979 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45EF93C7275F3E1E00DF3979 /* IntentHandler.swift in Sources */,
+				45EF93D6275F4AF600DF3979 /* SongIntent.intentdefinition in Sources */,
+				45EA89AE275F6C530012FCFB /* ViewController.swift in Sources */,
+				45EF93DD275F4B5500DF3979 /* SongIntentHandler.swift in Sources */,
+				45EA89B3275F6EBA0012FCFB /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45EF93CA275F3E1E00DF3979 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45EF93C0275F3E1E00DF3979 /* SongIntent */;
+			targetProxy = 45EF93C9275F3E1E00DF3979 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45A70915275A0AD10058A7F6 /* Main.storyboard */ = {
@@ -302,6 +423,7 @@
 		45A70921275A0ADD0058A7F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MyMusic/MyMusic.entitlements;
@@ -324,6 +446,7 @@
 		45A70922275A0ADD0058A7F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MyMusic/MyMusic.entitlements;
@@ -338,6 +461,48 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.harkaudio.poc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Hark POC Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		45EF93CD275F3E1E00DF3979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8Z7DUYBZ6B;
+				INFOPLIST_FILE = SongIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harkaudio.poc.SongIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Hark POC Dev";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45EF93CE275F3E1E00DF3979 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8Z7DUYBZ6B;
+				INFOPLIST_FILE = SongIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harkaudio.poc.SongIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Hark POC Dev";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -360,6 +525,15 @@
 			buildConfigurations = (
 				45A70921275A0ADD0058A7F6 /* Debug */,
 				45A70922275A0ADD0058A7F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45EF93CF275F3E1E00DF3979 /* Build configuration list for PBXNativeTarget "SongIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45EF93CD275F3E1E00DF3979 /* Debug */,
+				45EF93CE275F3E1E00DF3979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
