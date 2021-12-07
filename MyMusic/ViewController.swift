@@ -27,19 +27,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: - Song Configuration
     func configureSongs() {
         songs.append(Song(songName: "Background music", albumName: "something", artistName: "Rnado", songCover: "cover1", trackName: "song1"))
-        songs.append(Song(songName: "Havana", albumName: "Havana album", artistName: "camilla cabello", songCover: "cover2", trackName: "song2"))
-        songs.append(Song(songName: "Viva La Vida", albumName: "Dont know seriously", artistName: "cold play", songCover: "cover3", trackName: "song3"))
+        songs.append(Song(songName: "Havana", albumName: "Havana album", artistName: "camilla cabello", songCover: "cover3", trackName: "song3"))
+        songs.append(Song(songName: "Viva La Vida", albumName: "Dont know seriously", artistName: "cold play", songCover: "cover2", trackName: "song2"))
         
         // duplicated for population
         songs.append(Song(songName: "Background music", albumName: "something", artistName: "Rnado", songCover: "cover1", trackName: "song1"))
-        songs.append(Song(songName: "Havana", albumName: "Havana album", artistName: "camilla cabello", songCover: "cover2", trackName: "song2"))
-        songs.append(Song(songName: "Viva La Vida", albumName: "Dont know seriously", artistName: "cold play", songCover: "cover3", trackName: "song3"))
+        songs.append(Song(songName: "Havana", albumName: "Havana album", artistName: "camilla cabello", songCover: "cover3", trackName: "song3"))
+        songs.append(Song(songName: "Viva La Vida", albumName: "Dont know seriously", artistName: "cold play", songCover: "cover2", trackName: "song2"))
         songs.append(Song(songName: "Background music", albumName: "something", artistName: "Rnado", songCover: "cover1", trackName: "song1"))
-        songs.append(Song(songName: "Havana", albumName: "Havana album", artistName: "camilla cabello", songCover: "cover2", trackName: "song2"))
-        songs.append(Song(songName: "Viva La Vida", albumName: "Dont know seriously", artistName: "cold play", songCover: "cover3", trackName: "song3"))
+        songs.append(Song(songName: "Havana", albumName: "Havana album", artistName: "camilla cabello", songCover: "cover3", trackName: "song3"))
+        songs.append(Song(songName: "Viva La Vida", albumName: "Dont know seriously", artistName: "cold play", songCover: "cover2", trackName: "song2"))
         songs.append(Song(songName: "Background music", albumName: "something", artistName: "Rnado", songCover: "cover1", trackName: "song1"))
-        songs.append(Song(songName: "Havana", albumName: "Havana album", artistName: "camilla cabello", songCover: "cover2", trackName: "song2"))
-        songs.append(Song(songName: "Viva La Vida", albumName: "Dont know seriously", artistName: "cold play", songCover: "cover3", trackName: "song3"))
+        songs.append(Song(songName: "Havana", albumName: "Havana album", artistName: "camilla cabello", songCover: "cover3", trackName: "song3"))
+        songs.append(Song(songName: "Viva La Vida", albumName: "Dont know seriously", artistName: "cold play", songCover: "cover2", trackName: "song2"))
     }
     
     //MARK:- Table
