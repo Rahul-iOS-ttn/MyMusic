@@ -39,6 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK:- Siri Intent Handling
     
+    /// This function handles the INPlayMediaIntent that comes from our implemented intent Handler after running INPlayMediaMediaItemResolutionResult with success code in resolvedMediaItems
+    /// - Parameters:
+    ///   - application: UIApplication
+    ///   - intent: INIntent
+    ///   - completionHandler: gives a response code depending on success or failure of the function using INPlayMediaIntentResponse
     func application(_ application: UIApplication, handle intent: INIntent, completionHandler: @escaping (INIntentResponse) -> Void) {
         if let playMediaIntent = intent as? INPlayMediaIntent {
             if let mediaItems = playMediaIntent.mediaItems {

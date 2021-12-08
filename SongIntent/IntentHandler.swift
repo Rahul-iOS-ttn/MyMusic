@@ -16,7 +16,7 @@ class IntentHandler: INExtension {
         guard intent is INPlayMediaIntent else {
             fatalError("Unhandled intent type: \(intent)")
         }
-        
+        // we return the class where we have conformed and implemented necessary intent handling/resolving functions.
         return SongIntentHandler()
     }
     
