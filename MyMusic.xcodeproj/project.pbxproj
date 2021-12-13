@@ -19,6 +19,7 @@
 		45A7092E275A1B380058A7F6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7092D275A1B380058A7F6 /* PlayerViewController.swift */; };
 		45EA89AE275F6C530012FCFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70913275A0AD10058A7F6 /* ViewController.swift */; };
 		45EA89B3275F6EBA0012FCFB /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7092D275A1B380058A7F6 /* PlayerViewController.swift */; };
+		45EA89F4276212520012FCFB /* APIIntegration+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EA89F3276212520012FCFB /* APIIntegration+Data.swift */; };
 		45EF93C4275F3E1E00DF3979 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45EF93C3275F3E1E00DF3979 /* Intents.framework */; };
 		45EF93C7275F3E1E00DF3979 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EF93C6275F3E1E00DF3979 /* IntentHandler.swift */; };
 		45EF93CB275F3E1E00DF3979 /* SongIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45EF93C1275F3E1E00DF3979 /* SongIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -65,6 +66,7 @@
 		45A70926275A0E570058A7F6 /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
 		45A70927275A0E580058A7F6 /* song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song3.mp3; sourceTree = "<group>"; };
 		45A7092D275A1B380058A7F6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		45EA89F3276212520012FCFB /* APIIntegration+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIIntegration+Data.swift"; sourceTree = "<group>"; };
 		45EF93C1275F3E1E00DF3979 /* SongIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SongIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		45EF93C3275F3E1E00DF3979 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		45EF93C6275F3E1E00DF3979 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				45A70918275A0ADD0058A7F6 /* Assets.xcassets */,
 				45A7091A275A0ADD0058A7F6 /* LaunchScreen.storyboard */,
 				45A7091D275A0ADD0058A7F6 /* Info.plist */,
+				45EA89F3276212520012FCFB /* APIIntegration+Data.swift */,
 			);
 			path = MyMusic;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				45A7092E275A1B380058A7F6 /* PlayerViewController.swift in Sources */,
 				45A70910275A0AD10058A7F6 /* AppDelegate.swift in Sources */,
 				45EF93D5275F4AF600DF3979 /* SongIntent.intentdefinition in Sources */,
+				45EA89F4276212520012FCFB /* APIIntegration+Data.swift in Sources */,
 				45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */,
 				45EF93DC275F4B5500DF3979 /* SongIntentHandler.swift in Sources */,
 			);
