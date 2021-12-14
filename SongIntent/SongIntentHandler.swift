@@ -32,11 +32,18 @@ class SongIntentHandler: NSObject, INPlayMediaIntentHandling {
         
         // here we are mapping the song which is requested by the user, the requested song's details will be available
         if let mediaName = intent.mediaSearch?.mediaName {
-            for song in ViewController.shared.songs where song.songName.lowercased() == mediaName.lowercased() {
-                let mediaItem = INMediaItem(identifier: song.songName, title: song.songName, type: .music, artwork: nil)
-                print(mediaItem)
-                result = INPlayMediaMediaItemResolutionResult.success(with: mediaItem)
-                break
+            if mediaName.lowercased() == "songs" { // for this I have to identify playnext intent
+                let mediaItems = INMediaItem(identifier: "songs", title: "All Songs", type: .playlist, artwork: nil)
+                print("This is for all songs")
+                print(mediaItems)
+                result = INPlayMediaMediaItemResolutionResult.success(with: mediaItems)
+            } else {
+                for song in ViewController.shared.songs where song.songName.lowercased() == mediaName.lowercased() {
+                    let mediaItem = INMediaItem(identifier: song.songName, title: song.songName, type: .music, artwork: nil)
+                    print(mediaItem)
+                    result = INPlayMediaMediaItemResolutionResult.success(with: mediaItem)
+                    break
+                }
             }
         }
         completion([result])

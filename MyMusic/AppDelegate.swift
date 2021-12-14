@@ -110,9 +110,19 @@ extension AppDelegate {
         
         var songToPlay: Song?
         //        let song = song
+        // indexCounter for songs
+        // we have to make this index counter update to next song when we get next intent
+        let indexCounter: Int = 0
         
-        for song in ViewController.shared.songs where song.songName.lowercased() == mediaItemToPlay?.title?.lowercased() {
-            songToPlay = song
+        
+        // configuring if I can play the playlist
+        
+        if mediaItemToPlay?.identifier?.lowercased() == "songs" {
+            songToPlay = ViewController.shared.songs[indexCounter]
+        } else {
+            for song in ViewController.shared.songs where song.songName.lowercased() == mediaItemToPlay?.title?.lowercased() {
+                songToPlay = song
+            }
         }
         
         // print(songToPlay!)
