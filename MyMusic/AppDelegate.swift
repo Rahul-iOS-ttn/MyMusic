@@ -69,9 +69,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 let mediaItemToPlay = mediaItems.first
                 
                 //print(mediaItemToPlay)
+                let (songToPlay, songAtIndex) = resolveForSongItemAndIndex(mediaItemToResolve: mediaItemToPlay)
                 
+                PlayerViewController.shared.songs = ViewController.shared.songs
                 
-                songPlay(mediaItemToPlay: mediaItemToPlay)
+                PlayerViewController.shared.playerConfiguration(for: songAtIndex)
+                
+                // songPlay(mediaItemToPlay: mediaItemToPlay)
                 // do whatever to you do to play that media.
                 
                 completionHandler(INPlayMediaIntentResponse(code: .success, userActivity: nil))
@@ -85,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             return false
         }
         
-        songPlay(mediaItemToPlay: playMediaIntent.mediaItems?.first)
+        // songPlay(mediaItemToPlay: playMediaIntent.mediaItems?.first)
         
         //configuring where to send the view controller
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -106,52 +110,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 // MARK:- Song Play configuration
 extension AppDelegate {
-    func songPlay(mediaItemToPlay: INMediaItem?) {
+    func resolveForSongItemAndIndex(mediaItemToResolve: INMediaItem?) -> (Song?, Int) {
         
         var songToPlay: Song?
-        //        let song = song
-        // indexCounter for songs
-        // we have to make this index counter update to next song when we get next intent
-        let indexCounter: Int = 0
+        var songAtIndex: Int = 0
         
-        
-        // configuring if I can play the playlist
-        
-        if mediaItemToPlay?.identifier?.lowercased() == "songs" {
-            songToPlay = ViewController.shared.songs[indexCounter]
-        } else {
-            for song in ViewController.shared.songs where song.songName.lowercased() == mediaItemToPlay?.title?.lowercased() {
+        for song in ViewController.shared.songs {
+            if (song.songName.lowercased() == mediaItemToResolve?.title?.lowercased()) {
                 songToPlay = song
+                break
             }
+            songAtIndex += 1
         }
         
-        // print(songToPlay!)
-        getData()
-        
-        let urlString = Bundle.main.path(forResource: songToPlay?.trackName, ofType: "mp3")
-        
-        do {
-            try AVAudioSession.sharedInstance().setMode(.default)
-            
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            guard let urlString = urlString else {
-                return
-            }
-            
-            player = try AVAudioPlayer(contentsOf: URL(string: urlString)!)
-            
-            guard let player = player else {
-                return
-            }
-            
-            player.volume = 0.5
-            
-            player.play()
-            
-        } catch {
-            print("Error Occured")
-        }
+        return (songToPlay, songAtIndex)
     }
 }
 

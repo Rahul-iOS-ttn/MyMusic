@@ -13,9 +13,14 @@ class PlayerViewController: UIViewController {
     public var position: Int = 0
     public var songs: [Song] = []
     
+    // singleton
+    static let shared = PlayerViewController()
+    
     @IBOutlet var holderView: UIView!
     
     var player: AVAudioPlayer?
+    
+    var queuePlayer: AVQueuePlayer?
     
     // user interface elements
     
@@ -63,10 +68,14 @@ class PlayerViewController: UIViewController {
         }
     }
     
-    func configure() {
-        
+    func playerConfiguration(for songAtIndex: Int) {
         //MARK:- Player
-        let song = songs[position]
+        
+        if songs.count == 0 {
+            print("The songs are not present.")
+            return
+        }
+        let song = songs[songAtIndex]
         
         let urlString = Bundle.main.path(forResource: song.trackName, ofType: "mp3")
         
@@ -92,6 +101,17 @@ class PlayerViewController: UIViewController {
         } catch {
             print("Error Occured")
         }
+    }
+    
+    func configure() {
+        
+        let song = songs[position]
+        
+        // this is for AVAudioPlayer
+        // playerConfiguration(for: position)
+        
+        // this for AVQueuePlayer
+        configurationAVQueuePlayer(forSongAt: position)
         
         //MARK:- User Interface Elements
         
@@ -250,4 +270,72 @@ class PlayerViewController: UIViewController {
             player.stop()
         }
     }
+}
+
+//MARK:- Implementation for AVQueuePlayer
+
+extension PlayerViewController {
+    func convertToAVMediaItems(forSongs songs: [Song]) -> [AVPlayerItem] { // return an array of AVMediaItems
+        
+        var avPlayerItems: [AVPlayerItem] = []
+        
+        
+        
+        for song in songs {
+            let urlString = Bundle.main.path(forResource: song.trackName, ofType: "mp3")
+            
+            avPlayerItems.append(AVPlayerItem(url: URL(fileURLWithPath: urlString!)))
+        }
+        print("These are the player items ========================")
+        print(avPlayerItems)
+        return avPlayerItems
+    }
+    
+    func configurationAVQueuePlayer(forSongAt index: Int) {
+        
+        let avPlayerItems = convertToAVMediaItems(forSongs: songs)
+        
+        if queuePlayer == nil {
+            queuePlayer = AVQueuePlayer(items: avPlayerItems)
+        } else {
+            // stop the player and remove all items
+            queuePlayer?.removeAllItems()
+            
+            for item in avPlayerItems {
+                queuePlayer?.insert(item, after: nil)
+            }
+        }
+        
+        // print("These are the player items ==========")
+        // print(queuePlayer?.items())
+        
+        queuePlayer?.seek(to: .zero)
+        
+        queuePlayer?.play()
+        
+    }
+}
+
+
+
+// MARK:- PlayerController class for AVQueuePlayer
+
+class PlayerControl: UIView {
+    var player: AVQueuePlayer? {
+            get {
+                return playerLayer.player as? AVQueuePlayer
+            }
+            set {
+                playerLayer.player = newValue
+            }
+        }
+        
+        var playerLayer: AVPlayerLayer {
+            return layer as! AVPlayerLayer
+        }
+        
+        // Override UIView property
+        override static var layerClass: AnyClass {
+            return AVPlayerLayer.self
+        }
 }
