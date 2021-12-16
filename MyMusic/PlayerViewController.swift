@@ -226,8 +226,11 @@ class PlayerViewController: UIViewController {
     }
     
     @objc func didTapPlayPauseButton() {
-        if player?.isPlaying == true {
-            player?.pause()
+        // if player?.isPlaying == true {
+        if queuePlayer?.rate != 0 {
+            // player?.pause()
+            // pausing with AVQueuePlayer
+            queuePlayer?.pause()
             
             // show play button
             playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
@@ -241,7 +244,9 @@ class PlayerViewController: UIViewController {
             })
             
         } else {
-            player?.play()
+            // player?.play()
+            // playing with AVQueuPlayer
+            queuePlayer?.play()
             
             playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
             
@@ -259,15 +264,24 @@ class PlayerViewController: UIViewController {
         let value = slider.value
         
         //adjust player audio
+        // player?.volume = value
         
-        player?.volume = value
+        queuePlayer?.volume = value
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        // this is for AVPlayer
+        /*
         if let player = player {
             player.stop()
+        }
+        */
+        
+        //this is for AVQueuePlayer
+        if let queuePlayer = queuePlayer {
+            queuePlayer.pause()
+            queuePlayer.replaceCurrentItem(with: nil)// this will deallocate the player and you are now happy.
         }
     }
 }
@@ -279,15 +293,12 @@ extension PlayerViewController {
         
         var avPlayerItems: [AVPlayerItem] = []
         
-        
-        
         for song in songs {
             let urlString = Bundle.main.path(forResource: song.trackName, ofType: "mp3")
             
             avPlayerItems.append(AVPlayerItem(url: URL(fileURLWithPath: urlString!)))
         }
-        print("These are the player items ========================")
-        print(avPlayerItems)
+        
         return avPlayerItems
     }
     
@@ -306,36 +317,12 @@ extension PlayerViewController {
             }
         }
         
-        // print("These are the player items ==========")
-        // print(queuePlayer?.items())
-        
         queuePlayer?.seek(to: .zero)
+        
+        // setting the volume
+        queuePlayer?.volume = 0.5
         
         queuePlayer?.play()
         
     }
-}
-
-
-
-// MARK:- PlayerController class for AVQueuePlayer
-
-class PlayerControl: UIView {
-    var player: AVQueuePlayer? {
-            get {
-                return playerLayer.player as? AVQueuePlayer
-            }
-            set {
-                playerLayer.player = newValue
-            }
-        }
-        
-        var playerLayer: AVPlayerLayer {
-            return layer as! AVPlayerLayer
-        }
-        
-        // Override UIView property
-        override static var layerClass: AnyClass {
-            return AVPlayerLayer.self
-        }
 }
