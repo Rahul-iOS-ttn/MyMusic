@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450C5BBC276EE4D400383BCC /* MPRemoteCommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450C5BBB276EE4D300383BCC /* MPRemoteCommandCenter.swift */; };
 		45A70910275A0AD10058A7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7090F275A0AD10058A7F6 /* AppDelegate.swift */; };
 		45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70911275A0AD10058A7F6 /* SceneDelegate.swift */; };
 		45A70914275A0AD10058A7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70913275A0AD10058A7F6 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		450C5BBB276EE4D300383BCC /* MPRemoteCommandCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPRemoteCommandCenter.swift; sourceTree = "<group>"; };
 		45A7090C275A0AD10058A7F6 /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A7090F275A0AD10058A7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A70911275A0AD10058A7F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				45A7091A275A0ADD0058A7F6 /* LaunchScreen.storyboard */,
 				45A7091D275A0ADD0058A7F6 /* Info.plist */,
 				45EA89F3276212520012FCFB /* APIIntegration+Data.swift */,
+				450C5BBB276EE4D300383BCC /* MPRemoteCommandCenter.swift */,
 			);
 			path = MyMusic;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				45EA89F4276212520012FCFB /* APIIntegration+Data.swift in Sources */,
 				45A70912275A0AD10058A7F6 /* SceneDelegate.swift in Sources */,
 				45EF93DC275F4B5500DF3979 /* SongIntentHandler.swift in Sources */,
+				450C5BBC276EE4D400383BCC /* MPRemoteCommandCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

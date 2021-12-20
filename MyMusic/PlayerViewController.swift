@@ -204,7 +204,13 @@ class PlayerViewController: UIViewController {
     @objc func didTapBackButton() {
         if position > 0{
             position -= 1
-            player?.stop()
+            // player?.stop()
+            
+            // This is for AVQueuePlayer
+            if let queuePlayer = queuePlayer {
+                queuePlayer.pause()
+                queuePlayer.replaceCurrentItem(with: nil)// this will deallocate the player and you are now happy.
+            }
             
             for subview in holderView.subviews {
                 subview.removeFromSuperview()
@@ -216,7 +222,14 @@ class PlayerViewController: UIViewController {
     @objc func didTapNextButton() {
         if position < (songs.count - 1) {
             position += 1
-            player?.stop()
+            // player?.stop()
+            
+            // This is for AVQueuePlayer
+            if let queuePlayer = queuePlayer {
+                queuePlayer.pause()
+                queuePlayer.replaceCurrentItem(with: nil)// this will deallocate the player and you are now happy.
+            }
+            //I think here we will also be handling the stuff with next playback
             
             for subview in holderView.subviews {
                 subview.removeFromSuperview()
@@ -289,9 +302,13 @@ class PlayerViewController: UIViewController {
 //MARK:- Implementation for AVQueuePlayer
 
 extension PlayerViewController {
-    func convertToAVMediaItems(forSongs songs: [Song]) -> [AVPlayerItem] { // return an array of AVMediaItems
+    func convertToAVMediaItems(forSongs songs: [Song], firstSong ofAll: Int) -> [AVPlayerItem] { // return an array of AVMediaItems
         
-        var avPlayerItems: [AVPlayerItem] = []
+        let songToPreserve: Song = songs[ofAll]
+        
+        let songItemPreserved: AVPlayerItem = AVPlayerItem(url: URL(fileURLWithPath: Bundle.main.path(forResource: songToPreserve.trackName, ofType: "mp3")!))
+        
+        var avPlayerItems: [AVPlayerItem] = [songItemPreserved]
         
         for song in songs {
             let urlString = Bundle.main.path(forResource: song.trackName, ofType: "mp3")
@@ -304,7 +321,7 @@ extension PlayerViewController {
     
     func configurationAVQueuePlayer(forSongAt index: Int) {
         
-        let avPlayerItems = convertToAVMediaItems(forSongs: songs)
+        let avPlayerItems = convertToAVMediaItems(forSongs: songs, firstSong: index)
         
         if queuePlayer == nil {
             queuePlayer = AVQueuePlayer(items: avPlayerItems)
